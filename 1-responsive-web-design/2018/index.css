@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+/* generics */
+
+.obj-responsive {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.obj-rounded {
+	border-radius: 10px;
+}
+
+.obj-center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.txt-center {
+	text-align: center;
+}
+
+.list-inline {
+	margin: 0;
+	border: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.list-inline li {
+	display: inline-block;
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+
+.hide {
+	visibility: hidden;
+}
+
+.hide-all {
+	position: absolute;
+	top: auto;
+	left: -99999px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	visibility: hidden;
+}
+
+/* specifics */
+
+body {
+	background-color: maroon;
+	color: white;
+	font-family: "Lato", Verdana, sans-serif;
+}
+
+a {
+	color: black;
+}
+
+@media only screen and (max-width: 991.98px) {
+	/* Bootstrap breakpoint, at/up to this size considered to be a phone or tablet */
+	main {
+		padding: 0 0 2em 0;
+	}
+	
+	.container-fluid main .jumbotron {
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+	
+	table {
+		border-collapse: separate;
+		border-spacing: 1em;
+	}
+	
+	table thead {
+		display: none;
+	}
+	
+	table tbody tr td {
+		margin: 0;
+		border: 0;
+		padding: 0;
+		font-size: 1.6rem;
+	}
+	
+	table tbody tr td:nth-of-type(1n+2) {
+		display: inline-block;
+		margin-right: 0.25em;
+	}
+	
+	table tbody tr td:nth-of-type(0n+2)::after {
+		content: ",";
+	}
+	
+	table tbody tr td:nth-of-type(0n+3)::after {
+		content: ".";
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	/* Bootstrap breakpoint, at/above this size considered to be a laptop or desktop */
+	main {
+		padding: 4em 4em 2em 4em;
+		max-width: 1400px; /* Larger than Bootstrap's largest non-fluid container */
+	}
+}
+
+h1 {
+	font-weight: 900;
+	font-size: 4rem;
+}
+
+.page-header > div {
+	font-weight: 700;
+	font-size: 1.5rem;
+}
+
+figure.image {
+	padding: 5px;
+	background-color: white;
+	color: black;
+}
+
+.tribute-info li {
+	font-size: 1.6rem;
+}
+
+#image {
+	max-width: 1280px;
+}
+
+#main > .lead {
+	padding: 1.6rem 0 1.6rem 0;
+}
+
+#main p {
+	padding-bottom: 1.6rem;
+}
+
+#timeline > li {
+	display: flex;
+}
+
+#timeline > li > span:nth-of-type(1) {
+	flex-shrink: 0;
+}
+
+#timeline > li > span:nth-of-type(2) {
+	padding-left: 1.2em;
+	text-indent: -1em;
+}
+
+.panel-primary {
+	border-color: #333;
+}
+
+table {
+	margin: 0;
+	border: 1px solid #000;
+	background: rgba(255, 255, 255, 0.2);
+}
+
+table > caption {
+	border-color: #000;
+	background-color: #000;
+	color: #fff;
+}
+
+.table tbody tr td:first-child {
+	white-space: nowrap;
+}
+
+.sold-out {
+	display: inline-block;
+	border-radius: 5px;
+	padding: 3px;
+	background: rgba(0, 0, 0, 0.8);
+	color: white;
+	transform: rotate(-10deg);
+}
+
+@media only screen and (max-width: 767.98px) {
+	/* Bootstrap breakpoint, at/up to this size considered to be a phone */
+	blockquote {
+		padding: 1em 2.5em 0 2.5em;
+	}
+	
+	blockquote::before, blockquote::after {
+		font-size: 7.5rem;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	/* Bootstrap breakpoint; at/above this size phones are considered to be excluded */
+	blockquote {
+		padding: 3.5em 5em 0 5em;
+	}
+	
+	blockquote::before, blockquote::after {
+		font-size: 15rem;
+	}
+}
+
+blockquote {
+	position: relative;
+	margin-left: 0;
+	margin-right: 0;
+	border: 0;
+	quotes: '\201C' '\201D' "\2018" "\2019";
+}
+
+blockquote::before {
+	content: open-quote;
+	top: -0.16em;
+	left: 0;
+}
+
+blockquote::after {
+	content: close-quote;
+	bottom: -0.7em;
+	right: 0;
+}
+
+blockquote::before, blockquote::after {
+	position: absolute;
+	display: block;
+	font-weight: bold;
+	opacity: 0.2;
+}
+
+.social-media {
+	padding-top: 4em;
+}
+
+.social-media li {
+	padding: 0 0.5rem 0 0.5rem;
+	line-height: 2;	
+}
