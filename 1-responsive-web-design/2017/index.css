@@ -1,0 +1,131 @@
+@media only screen and (max-width: 991px) {
+	/* Bootstrap breakpoint, at/up to this size considered to be a phone or tablet */
+	.container-fluid {
+		padding: 0 0 2em 0;
+	}
+	
+	.container-fluid main .jumbotron {
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+	
+	.table {
+		border-collapse: separate;
+		border-spacing: 1em;
+	}
+	
+	.table tbody tr td {
+		margin: 0;
+		border: 0;
+		padding: 0;
+		font-size: 1.6rem;
+	}
+	
+	.table tbody tr td:nth-of-type(1n+2) {
+		display: inline-block;
+		margin-right: 0.25em;
+	}
+	
+	.table tbody tr td:nth-of-type(0n+2)::after {
+		content: ",";
+	}
+	
+	.table tbody tr td:nth-of-type(0n+3)::after {
+		content: ".";
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	/* Bootstrap breakpoint, at/above this size considered to be a laptop or desktop */
+	.container-fluid {
+		padding: 4em 4em 2em 4em;
+		max-width: 1400px; /* Larger than Bootstrap's largest non-fluid container */
+	}
+}
+
+#main > .lead {
+	padding: 1.6rem 0 1.6rem 0;
+}
+
+#main p, #main ul {
+	padding-bottom: 1.6rem;
+}
+
+.jumbotron li {
+	font-size: 1.6rem;
+}
+
+.panel-primary {
+	border-color: #333;
+}
+
+.panel-primary > .panel-heading {
+	border-color: #333;
+	background-color: #333;
+	color: #fff;
+}
+
+.table {
+		margin: 0;
+}
+
+.table tbody tr td:first-child {
+	white-space: nowrap;
+}
+
+@media only screen and (max-width: 767px) {
+	/* Bootstrap breakpoint, at/up to this size considered to be a phone */
+	blockquote.full-width {
+		padding: 1em 2.5em 0 2.5em;
+	}
+	
+	blockquote.full-width::before, blockquote.full-width::after {
+		font-size: 7.5rem;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	/* Bootstrap breakpoint; at/above this size phones are considered to be excluded */
+	blockquote.full-width {
+		padding: 3.5em 5em 0 5em;
+	}
+	
+	blockquote.full-width::before, blockquote.full-width::after {
+		font-size: 15rem;
+	}
+}
+
+blockquote.full-width {
+	position: relative;
+	margin-left: 0;
+	margin-right: 0;
+	border: 0;
+	quotes: '\201C' '\201D' "\2018" "\2019";
+}
+
+blockquote.full-width::before {
+	content: open-quote;
+	top: -0.16em;
+	left: 0;
+}
+
+blockquote.full-width::after {
+	content: close-quote;
+	bottom: -0.7em;
+	right: 0;
+}
+
+blockquote.full-width::before, blockquote.full-width::after {
+	position: absolute;
+	display: block;
+	font-weight: bold;
+	opacity: 0.2;
+}
+
+.social-media {
+	padding-top: 4em;
+}
+
+.social-media li {
+	line-height: 2;	
+}
